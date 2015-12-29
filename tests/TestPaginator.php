@@ -14,15 +14,38 @@ class TestPaginator extends \PHPUnit_Framework_TestCase
         $this->assertEquals(1, $paginator->getDisplayFrom());
         $this->assertEquals(10, $paginator->getDisplayTo());
         
-        $this->assertFalse($paginator->getPreviousPage());
+        $this->assertFalse($paginator->hasPreviousPage());
         $this->assertTrue($paginator->hasNextPage());
 
         $this->assertEquals(2, $paginator->getNextPage());
         $this->assertEquals(1, $paginator->getPageSectionStart());
-        $this->assertEquals(6, $paginator->getPageSectionEnd());
+        $this->assertEquals(5, $paginator->getPageSectionEnd());
         
         $this->assertEquals(53, $paginator->itemTotal);
         $this->assertEquals(1, $paginator->currentPage);
-        $this->assertEquals(6, $paginator->currentPage);
+        $this->assertEquals(6, $paginator->lastPage);
+    }
+    
+    public function test2()
+    {
+        $paginator = new \Ilex\Utility\Paginator(5, 10);
+        $paginator->setCurentPage(53, 3);
+        $paginator->calPaginator();
+        
+        $this->assertEquals(21, $paginator->getDisplayFrom());
+        $this->assertEquals(30, $paginator->getDisplayTo());
+        
+        $this->assertTrue($paginator->hasPreviousPage());
+        $this->assertTrue($paginator->hasNextPage());
+
+        $this->assertEquals(2, $paginator->getPreviousPage());
+        $this->assertEquals(4, $paginator->getNextPage());
+        
+        $this->assertEquals(1, $paginator->getPageSectionStart());
+        $this->assertEquals(5, $paginator->getPageSectionEnd());
+        
+        $this->assertEquals(53, $paginator->itemTotal);
+        $this->assertEquals(3, $paginator->currentPage);
+        $this->assertEquals(6, $paginator->lastPage);
     }
 }
