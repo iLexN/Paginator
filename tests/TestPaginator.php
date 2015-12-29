@@ -24,6 +24,9 @@ class TestPaginator extends \PHPUnit_Framework_TestCase
         $this->assertEquals(53, $paginator->itemTotal);
         $this->assertEquals(1, $paginator->currentPage);
         $this->assertEquals(6, $paginator->lastPage);
+        
+        $this->assertEquals(10, $paginator->getSqlLimit());
+        $this->assertEquals(0, $paginator->getSqlOffset());
     }
     
     public function test2()
@@ -47,6 +50,11 @@ class TestPaginator extends \PHPUnit_Framework_TestCase
         $this->assertEquals(53, $paginator->itemTotal);
         $this->assertEquals(3, $paginator->currentPage);
         $this->assertEquals(6, $paginator->lastPage);
+        
+        $this->assertEquals(10, $paginator->getSqlLimit());
+        $this->assertEquals(20, $paginator->getSqlOffset());
+        
+        
     }
     
     public function test3()
@@ -69,6 +77,9 @@ class TestPaginator extends \PHPUnit_Framework_TestCase
         $this->assertEquals(53, $paginator->itemTotal);
         $this->assertEquals(6, $paginator->currentPage);
         $this->assertEquals(6, $paginator->lastPage);
+        
+        $this->assertEquals(10, $paginator->getSqlLimit());
+        $this->assertEquals(50, $paginator->getSqlOffset());
     }
     
     public function test4()
