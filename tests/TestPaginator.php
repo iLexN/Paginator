@@ -24,6 +24,5 @@ class TestPaginator extends \PHPUnit_Framework_TestCase
         $this->assertEquals(53, $paginator->itemTotal);
         $this->assertEquals(1, $paginator->currentPage);
         $this->assertEquals(6, $paginator->currentPage);
-        
     }
 }

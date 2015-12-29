@@ -51,7 +51,7 @@ class Paginator
      * @param int $pagePerSection number of page Per Section
      * @param int $itemPerPage number of item per page
      */
-    public function __construct(int $pagePerSection, int $itemPerPage)
+    public function __construct($pagePerSection, $itemPerPage)
     {
         $this->pagePerSection = $pagePerSection;
         $this->itemPerPage = $itemPerPage;
@@ -65,7 +65,7 @@ class Paginator
     public function setCurentPage($itemTotal, $currentPage)
     {
         $this->itemTotal = $itemTotal;
-        if ( $currentPage <= 0 ) {
+        if ($currentPage <= 0) {
             $this->currentPage = 1;
         } else {
             $this->currentPage = $currentPage;
@@ -78,7 +78,7 @@ class Paginator
     public function calPaginator()
     {
         $this->calTotalPage();
-        $this->calcalItemShow();
+        $this->calItemShow();
         $this->calPageSection();
     }
     
