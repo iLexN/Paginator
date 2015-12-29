@@ -6,37 +6,37 @@ class Paginator
 {
     /**
      * number of page per section
-     * @var int 
+     * @var int
      */
     private $pagePerSection;
     
     /**
      * number of item show per page
-     * @var type 
+     * @var type
      */
     private $itemPerPage;
     
     /**
      * total item
-     * @var int 
+     * @var int
      */
     public $itemTotal;
     
     /**
      * current page
-     * @var int 
+     * @var int
      */
     public $currentPage;
     
     /**
      * last page nunber
-     * @var int 
+     * @var int
      */
     public $lastPage;
     
     /**
      * for cal , number of item already showed
-     * @var int 
+     * @var int
      */
     private $itemShowed;
     
@@ -47,7 +47,7 @@ class Paginator
     private $pageSection;
 
     /**
-     * 
+     *
      * @param int $pagePerSection number of page Per Section
      * @param int $itemPerPage number of item per page
      */
@@ -115,7 +115,7 @@ class Paginator
     }
     
     /**
-     * display from 
+     * display from
      * @return int
      */
     public function getDisplayFrom()
@@ -177,7 +177,7 @@ class Paginator
     }
     
     /**
-     * get next page 
+     * get next page
      * @return int
      */
     public function getNextPage()
