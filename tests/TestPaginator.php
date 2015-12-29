@@ -93,6 +93,6 @@ class TestPaginator extends \PHPUnit_Framework_TestCase
         $paginator->setCurentPage(53, 8);
         $paginator->calPaginator();
         
-        $this->assertEquals(1, $paginator->lastPage);
+        $this->assertEquals(1, $paginator->currentPage);
     }
 }
