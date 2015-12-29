@@ -48,4 +48,26 @@ class TestPaginator extends \PHPUnit_Framework_TestCase
         $this->assertEquals(3, $paginator->currentPage);
         $this->assertEquals(6, $paginator->lastPage);
     }
+    
+    public function test3()
+    {
+        $paginator = new \Ilex\Utility\Paginator(5, 10);
+        $paginator->setCurentPage(53, 6);
+        $paginator->calPaginator();
+        
+        $this->assertEquals(51, $paginator->getDisplayFrom());
+        $this->assertEquals(53, $paginator->getDisplayTo());
+        
+        $this->assertTrue($paginator->hasPreviousPage());
+        $this->assertFalse($paginator->hasNextPage());
+
+        $this->assertEquals(5, $paginator->getPreviousPage());
+        
+        $this->assertEquals(6, $paginator->getPageSectionStart());
+        $this->assertEquals(6, $paginator->getPageSectionEnd());
+        
+        $this->assertEquals(53, $paginator->itemTotal);
+        $this->assertEquals(6, $paginator->currentPage);
+        $this->assertEquals(6, $paginator->lastPage);
+    }
 }
