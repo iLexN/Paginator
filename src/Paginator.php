@@ -206,4 +206,21 @@ class Paginator
         }
         return $section_page_end;
     }
+    
+    /**
+     * sql helper method , limit
+     * @return type
+     */
+    public function getSqlLimit()
+    {
+        return $this->itemPerPage;
+    }
+    
+    /**
+     * sql helper method , offset
+     * @return type
+     */
+    public function getSqlOffset(){
+        return $this->getDisplayFrom() - 1;
+    }
 }
