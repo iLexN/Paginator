@@ -220,7 +220,8 @@ class Paginator
      * sql helper method , offset
      * @return type
      */
-    public function getSqlOffset(){
+    public function getSqlOffset()
+    {
         return $this->getDisplayFrom() - 1;
     }
 }
