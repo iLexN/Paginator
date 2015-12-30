@@ -9,7 +9,6 @@ class TestPaginator extends \PHPUnit_Framework_TestCase
     {
         $paginator = new \Ilex\Utility\Paginator(5, 10);
         $paginator->setCurentPage(53, 1);
-        $paginator->calPaginator();
         
         $this->assertEquals(1, $paginator->getDisplayFrom());
         $this->assertEquals(10, $paginator->getDisplayTo());
@@ -33,7 +32,6 @@ class TestPaginator extends \PHPUnit_Framework_TestCase
     {
         $paginator = new \Ilex\Utility\Paginator(5, 10);
         $paginator->setCurentPage(53, 3);
-        $paginator->calPaginator();
         
         $this->assertEquals(21, $paginator->getDisplayFrom());
         $this->assertEquals(30, $paginator->getDisplayTo());
@@ -61,7 +59,6 @@ class TestPaginator extends \PHPUnit_Framework_TestCase
     {
         $paginator = new \Ilex\Utility\Paginator(5, 10);
         $paginator->setCurentPage(53, 6);
-        $paginator->calPaginator();
         
         $this->assertEquals(51, $paginator->getDisplayFrom());
         $this->assertEquals(53, $paginator->getDisplayTo());
@@ -86,7 +83,6 @@ class TestPaginator extends \PHPUnit_Framework_TestCase
     {
         $paginator = new \Ilex\Utility\Paginator(5, 10);
         $paginator->setCurentPage(0, 0);
-        $paginator->calPaginator();
         
         $this->assertEquals(0, $paginator->getDisplayFrom());
         $this->assertEquals(0, $paginator->getDisplayTo());
@@ -102,7 +98,6 @@ class TestPaginator extends \PHPUnit_Framework_TestCase
     {
         $paginator = new \Ilex\Utility\Paginator(5, 10);
         $paginator->setCurentPage(53, 8);
-        $paginator->calPaginator();
         
         $this->assertEquals(1, $paginator->currentPage);
     }

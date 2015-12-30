@@ -70,12 +70,13 @@ class Paginator
         } else {
             $this->currentPage = $currentPage;
         }
+        $this->calPaginator();
     }
     
     /**
      * cal paginator process
      */
-    public function calPaginator()
+    private function calPaginator()
     {
         $this->calTotalPage();
         $this->calItemShow();
@@ -222,6 +223,6 @@ class Paginator
      */
     public function getSqlOffset()
     {
-        return $this->getDisplayFrom() - 1;
+        return $this->itemShowed;
     }
 }
