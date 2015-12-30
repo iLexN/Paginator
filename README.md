@@ -42,4 +42,5 @@
         <a href="url?page=<?=$paginator->getNextPage()?>">Next Page</a> &nbsp;
     <? } ?>
 
-can use <ul><li></li></ul> or <div></div> just you like.
+can use ul li or div just you like.
+add any css class just you like.
