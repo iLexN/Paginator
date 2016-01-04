@@ -88,7 +88,7 @@ class Paginator
      */
     private function calTotalPage()
     {
-        $this->lastPage = ceil($this->itemTotal / $this->itemPerPage);
+        $this->lastPage = (int) ceil($this->itemTotal / $this->itemPerPage);
         if ($this->lastPage == 0) {
             $this->lastPage = 1;
         }
@@ -112,7 +112,7 @@ class Paginator
      */
     private function calPageSection()
     {
-        $this->pageSection = ceil($this->currentPage / $this->pagePerSection);
+        $this->pageSection = (int) ceil($this->currentPage / $this->pagePerSection);
     }
     
     /**
