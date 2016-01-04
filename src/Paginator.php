@@ -12,7 +12,7 @@ class Paginator
     
     /**
      * number of item show per page
-     * @var type
+     * @var int
      */
     private $itemPerPage;
     
@@ -59,8 +59,8 @@ class Paginator
     
     /**
      * set current page
-     * @param type $itemTotal number of total
-     * @param type $currentPage current page
+     * @param int $itemTotal number of total
+     * @param int $currentPage current page
      */
     public function setCurentPage($itemTotal, $currentPage)
     {
@@ -210,7 +210,7 @@ class Paginator
     
     /**
      * sql helper method , limit
-     * @return type
+     * @return int
      */
     public function getSqlLimit()
     {
@@ -219,7 +219,7 @@ class Paginator
     
     /**
      * sql helper method , offset
-     * @return type
+     * @return int
      */
     public function getSqlOffset()
     {
