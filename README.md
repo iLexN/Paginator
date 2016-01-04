@@ -1,5 +1,7 @@
 [![Build Status](https://travis-ci.org/iLexN/Paginator.svg?branch=master)](https://travis-ci.org/iLexN/Paginator)
 [![Coverage Status](https://coveralls.io/repos/iLexN/Paginator/badge.svg?branch=master&service=github)](https://coveralls.io/github/iLexN/Paginator?branch=master)
+[![StyleCI](https://styleci.io/repos/48730890/shield)](https://styleci.io/repos/48730890)
+[![Scrutinizer Code Quality](https://scrutinizer-ci.com/g/iLexN/Paginator/badges/quality-score.png?b=master)](https://scrutinizer-ci.com/g/iLexN/Paginator/?branch=master)
 
 #Paginator
 - get the pagination data
